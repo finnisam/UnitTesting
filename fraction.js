@@ -10,6 +10,10 @@ class fraction
         var sum = add_fraction(this,x);
         console.log("%d/%d",sum.num,sum.den);
     }
+        div(x)
+    {
+        console.log("%d/%d = %d",this.num/x.num,this.den/x.den,(this.num/x.num)/(this.den/x.den));
+    }
 
 }
 
