@@ -1,3 +1,4 @@
+main
 class fraction
 {
     constructor(num,den)
@@ -20,4 +21,3 @@ function gcd(a,b)
     }
     return gcd;
 }
-
