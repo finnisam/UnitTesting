@@ -6,6 +6,11 @@ class fraction
         this.num = num;
         this.den = den;
     }
+    add(x)
+    {
+        var sum = add_fraction(this,x);
+        console.log("%d/%d",sum.num,sum.den);
+    }
 
 }
 
@@ -21,3 +26,21 @@ function gcd(a,b)
     }
     return gcd;
 }
+
+function add_fraction(x,y)
+{
+    var hcf=gcd(x.den,y.den);
+    var result = new fraction;
+    result.den = x.den*y.den / hcf;
+    result.num = x.num*(result.den/x.den) + y.num*(result.den/y.den);
+    return result;
+}
+
+function main()
+{
+    var x = new fraction(1,2);
+    var y = new fraction(1,2);
+    (x.add(y));
+}
+
+main()
