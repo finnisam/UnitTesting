@@ -1,7 +1,6 @@
-main
 class fraction
 {
-    constructor(num,den)
+    constructor( num , den )
     {
         this.num = num;
         this.den = den;
@@ -44,3 +43,4 @@ function main()
 }
 
 main()
+
