@@ -10,6 +10,11 @@ class fraction
         var sum = add_fraction(this,x);
         console.log("%d/%d",sum.num,sum.den);
     }
+    subtract(x)
+    {
+        var subtract = subtract_fraction(this,x);
+        console.log("%d/%d",subtract.num,subtract.den);
+    }
         div(x)
     {
         console.log("%d/%d = %d",this.num/x.num,this.den/x.den,(this.num/x.num)/(this.den/x.den));
@@ -36,6 +41,14 @@ function add_fraction(x,y)
     var result = new fraction;
     result.den = x.den*y.den / hcf;
     result.num = x.num*(result.den/x.den) + y.num*(result.den/y.den);
+    return result;
+}
+function subtract_fraction(x,y)
+{
+    var hcf=gcd(x.den,y.den);
+    var result = new fraction;
+    result.den = x.den*y.den / hcf;
+    result.num = x.num*(result.den/x.den) - y.num*(result.den/y.den);
     return result;
 }
 
