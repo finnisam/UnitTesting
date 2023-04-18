@@ -16,13 +16,17 @@ class fraction
         console.log("%d/%d",subtract.num,subtract.den);
     }
     multiply(x)
-    {           console.log("%d/%d",this.num*x.num,this.den*x.den);
+    {           
+        console.log("%d/%d",this.num*x.num,this.den*x.den);
     }
     div(x)
     {
         console.log("%d/%d = %d",this.num/x.num,this.den/x.den,(this.num/x.num)/(this.den/x.den));
     }
-
+    reciprocal()
+    {
+        console.log("%d/%d",this.den,this.num);
+    }
 }
 
 function gcd(a,b)
